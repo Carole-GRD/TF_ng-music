@@ -6,7 +6,7 @@ import { MusicComponent } from './music/music.component';
 
 const routes: Routes = [
   { path: '', component: MusicComponent /* TODO lazyloading children */ },
-  { path: 'admin', component: AdminComponent /* TODO lazyloading children */ },
+  { path: 'admin', component: AdminComponent, loadChildren : () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: 'not-found', component: NotFoundComponent },
   // Attention à toujours mettre route ** en dernier ->
     // Correspond à "Si aucun chemin précédemment défini" donc doit être en dessous de tous les chemins
