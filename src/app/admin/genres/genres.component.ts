@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Genre } from 'src/app/shared/models/genre';
 import { GenreService } from 'src/app/shared/services/genre/genre.service';
 
@@ -11,7 +12,7 @@ export class GenresComponent implements OnInit {
 
   listGenres : Genre[] = [];
 
-  constructor(private _genreService : GenreService) {}
+  constructor(private _genreService : GenreService, private _router : Router) {}
 
   ngOnInit() : void {
     this._genreService.getAll().subscribe({
@@ -28,6 +29,19 @@ export class GenresComponent implements OnInit {
       complete : () => {
         console.log('COMPLETE');
         
+      }
+    })
+  }
+
+  deleteGenre(id: number) {
+    this._genreService.delete(id).subscribe({
+      error : (error) => {
+        if (error.status === 404) {
+          this._router.navigateByUrl('/not-found')
+        }
+      },
+      complete : () => {
+        this._genreService.getAll().subscribe((res) => { this.listGenres = res.results });
       }
     })
   }

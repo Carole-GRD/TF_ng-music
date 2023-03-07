@@ -13,7 +13,7 @@
             <td>{{genre.name}}</td>
             <td>
                 <button routerLink="/admin/genres/update/{{genre.id}}">Modifier</button>
-                <button>Supprimer</button>
+                <button (click)="deleteGenre(genre.id)">Supprimer</button>
             </td>
         </tr>
     </tbody>
