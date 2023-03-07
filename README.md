@@ -9,3 +9,15 @@
 ## Pour créer un composant 
 - ng generate component eventuel-chemin/nom-du-component
 - ng g c eventuel-chemin/nom-du-component (la version flemme)
+
+## Pour créer un module
+- ng generate module
+
+## Pour créer un service
+- ng g s nom-du-service
+
+##
+- ng generate interface genre
+- ng g i genre
+
+-ng g interceptor
