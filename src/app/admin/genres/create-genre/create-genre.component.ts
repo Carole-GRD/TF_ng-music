@@ -35,8 +35,6 @@ export class CreateGenreComponent {
           this._router.navigateByUrl('/admin/genres');
         }
       })
-
-      
     }
     else {
       this.genreForm.markAllAsTouched();

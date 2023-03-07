@@ -12,7 +12,7 @@
         <tr *ngFor="let genre of listGenres">
             <td>{{genre.name}}</td>
             <td>
-                <button>Modifier</button>
+                <button routerLink="/admin/genres/update/{{genre.id}}">Modifier</button>
                 <button>Supprimer</button>
             </td>
         </tr>
