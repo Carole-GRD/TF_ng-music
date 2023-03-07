@@ -6,6 +6,8 @@ import { AdminComponent } from './admin.component';
 import { GenresComponent } from './genres/genres.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { AlbumsComponent } from './albums/albums.component';
     AdminComponent,
     GenresComponent,
     ArtistsComponent,
-    AlbumsComponent
+    AlbumsComponent,
+    CreateGenreComponent
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    ReactiveFormsModule
   ],
   bootstrap: [
     AdminComponent

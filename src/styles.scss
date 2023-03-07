@@ -9,3 +9,46 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+
+table, tr, th, td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+th {
+    background-color: lightgray;
+}
+
+td button {
+    margin: 0 0.5rem;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 1rem;
+    
+}
+
+.form-group input {
+    width: 25%;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
+}
+
+.txt-danger {
+    color: darkred;
+    font-size: smaller;
+}
