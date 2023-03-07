@@ -12,7 +12,7 @@ export class UpdateGenreComponent {
 
   genreForm: FormGroup;
   genreId: number;
-
+  uniqueNameError: string = '';
 
   constructor(
           private _fb : FormBuilder, 
@@ -41,11 +41,10 @@ export class UpdateGenreComponent {
           if (err.status === 404) {
             this._router.navigateByUrl('/not-found')
           }
-          
         },
 
         complete : () => {
-
+          
         }
       })
     }
@@ -53,7 +52,12 @@ export class UpdateGenreComponent {
     updateGenre() : void {
     if (this.genreForm.valid) {
       this._genreService.update(this.genreId, this.genreForm.value).subscribe({
-        error : () => {},
+        error : (err) => {
+          if (err.status === 409) {
+            this.uniqueNameError = err.error.msg;
+            
+          }
+        },
         complete : () => {
           this._router.navigateByUrl('/admin/genres')
         }

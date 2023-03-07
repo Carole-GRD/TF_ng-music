@@ -11,6 +11,7 @@
         <input id="name" type="text" formControlName="name">
         <span *ngIf="genreForm.get('name')?.errors?.['required'] && genreForm.get('name')?.touched" class="txt-danger">Ce champ est requis</span>
         <span *ngIf="genreForm.get('name')?.errors?.['maxlength']" class="txt-danger">Le nom doit faire maximum 50 caractères</span>
+        <span class="txt-danger" *ngIf="uniqueNameError.length > 0">{{ uniqueNameError }}</span>
     </div>
 
     <button type="submit">Créer le genre</button>
