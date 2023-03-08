@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class GenreService {
 
-  private _genreUrl = 'http://localhost:8080/api/genre/';
+  private _genreUrl : string = 'http://localhost:8080/api/genre/';
 
   constructor( private _httpClient: HttpClient ) { }
 
