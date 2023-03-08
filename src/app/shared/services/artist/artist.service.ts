@@ -29,7 +29,7 @@ export class ArtistService {
   }
 
   delete(id: number) : Observable<any> {
-    return this._httpClient.delete(this._genreUrl + id)
+    return this._httpClient.delete(this._genreUrl + id);
   }
 
 }

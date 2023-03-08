@@ -32,14 +32,11 @@ export class UpdateArtistComponent implements OnInit {
     this._artistService.getById(this.artistId).subscribe({
       next : (res) => {
         console.log("NEXT", res);
-        // console.log(res.result.birthdate);
-        
+        res.result.birthdate = new Date(res.result.birthdate);
         this.artistForm.patchValue({
           firstname : res.result.firstname,
           lastname : res.result.lastname,
-          birthdate : res.result.birthdate,
-          // birthdate : res.result.birthdate.getFullYear()-(res.result.birthdate.getMonth()+1 < 10 ) ? '0' + (res.result.birthdate.getMonth()+1) : (res.result.birthdate.getMonth()+1) -(res.result.birthdate.getDate() < 10 ) ? '0'+ res.result.birthdate.getDate() : res.result.birthdate.getDate(),
-          // birthdate : `${res.result.birthdate.getFullYear()}-${(res.result.birthdate.getMonth()+1 < 10 ) ? '0'+(res.result.birthdate.getMonth()+1) : (res.result.birthdate.getMonth()+1) }-${(res.result.birthdate.getDate() < 10 ) ? '0'+ res.result.birthdate.getDate() : res.result.birthdate.getDate()}`,
+          birthdate : `${res.result.birthdate.getFullYear()}-${(res.result.birthdate.getMonth()+1 < 10 ) ? '0'+(res.result.birthdate.getMonth()+1) : (res.result.birthdate.getMonth()+1) }-${(res.result.birthdate.getDate() < 10 ) ? '0'+ res.result.birthdate.getDate() : res.result.birthdate.getDate()}`,
           deathdate : res.result.deathdate
         })
       },
