@@ -1,4 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { AuthResult } from '../../models/auth.result';
 import { Login } from '../../models/login';
 import { Register } from '../../models/register';
 
@@ -7,17 +10,19 @@ import { Register } from '../../models/register';
 })
 export class AuthService {
 
-  constructor() { }
+  private _authUrl = 'http://localhost:8080/api/auth/';
 
-  register(register : Register) {
+  constructor(private _httpClient : HttpClient) { }
 
+  register(register : Register) : Observable<AuthResult> {
+    return this._httpClient.post<AuthResult>(this._authUrl + 'register', register);
   }
 
-  login(login : Login) {
-
+  login(login : Login) : Observable<AuthResult> {
+    return this._httpClient.post<AuthResult>(this._authUrl + 'login', login);
   }
 
-  logout() {
+  logout() : void {
   
   }
 }
