@@ -9,6 +9,7 @@ import { AlbumsComponent } from './albums/albums.component';
 import { CreateGenreComponent } from './genres/create-genre/create-genre.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateGenreComponent } from './genres/update-genre/update-genre.component';
+import { CreateArtistComponent } from './artists/create-artist/create-artist.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { UpdateGenreComponent } from './genres/update-genre/update-genre.compone
     ArtistsComponent,
     AlbumsComponent,
     CreateGenreComponent,
-    UpdateGenreComponent
+    UpdateGenreComponent,
+    CreateArtistComponent
   ],
   imports: [
     CommonModule,

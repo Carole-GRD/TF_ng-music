@@ -21,7 +21,6 @@
 - ng g s shared/services/nom-du-service/nom-du service  (si dons dossier 'shared' et sous-dossier 'services')
 - ng g s nom-du-service   (on n'aura pas de dossier avec le nom du service) 
 
-
 ## Pour créer une interface
 - ng generate interface genre
 - ng g i genre
