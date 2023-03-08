@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 body {
     margin: 0;
     padding: 0;
@@ -10,9 +8,8 @@ ul {
     padding: 0;
 }
 
-
 table, tr, th, td {
-    border: 1px solid gray;
+    border : 1px solid gray;
     border-collapse: collapse;
     margin-bottom: 2rem;
 }
@@ -22,33 +19,29 @@ th, td {
 }
 
 th {
-    background-color: lightgray;
+    background-color: lightgrey;
 }
 
 td button {
     margin: 0 0.5rem;
 }
 
-
 .form-group {
     display: flex;
     flex-direction: column;
 }
-
 .form-group label {
-    margin-bottom: 1rem;
-    
+    margin-bottom: 0.5rem ;
 }
-
 .form-group input {
     width: 25%;
 }
 
 .mb-2 {
-    margin-bottom: 2rem;
+    margin-bottom: 2rem ;
 }
 
 .txt-danger {
-    color: darkred;
+    color : darkred;
     font-size: smaller;
 }
