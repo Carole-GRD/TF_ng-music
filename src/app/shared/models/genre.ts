@@ -1,6 +1,6 @@
 
-// ATTENTION :   faire le model comme attendu en DB !!!!
 
+// ATTENTION :   faire le model comme attendu en DB !!!!
 export interface Genre {
     id : number;
     name : string;
