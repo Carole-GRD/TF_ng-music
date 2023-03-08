@@ -32,7 +32,9 @@ export class UpdateArtistComponent implements OnInit {
     this._artistService.getById(this.artistId).subscribe({
       next : (res) => {
         console.log("NEXT", res);
+        console.log('res.result.birthdate : ', res.result.birthdate);
         res.result.birthdate = new Date(res.result.birthdate);
+        console.log('new Date(res.result.birthdate) : ', res.result.birthdate);
         this.artistForm.patchValue({
           firstname : res.result.firstname,
           lastname : res.result.lastname,
