@@ -6,11 +6,13 @@
         <section>
             <p>Prénom : {{ artist.firstname }}</p>
             <p>Nom : {{ artist.lastname }}</p>
+            <!-- <p>Date de naissance : {{ artist.birthdate }}</p> -->
             <p>Date de naissance : {{ artist.birthdate | date : 'dd/MM/yyyy' }}</p>
+            <!-- <p>Date de décès : {{ artist.deathdate }}</p> -->
             <p>Date de décès : {{ artist.deathdate | date : 'dd/MM/yyyy' }}</p>
         </section>
         <section>
-            <button>Modifier</button>
+            <button routerLink="/admin/artists/update/{{artist.id}}">Modifier</button>
             <button>Supprimer</button>
         </section>
     </article>

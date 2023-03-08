@@ -1,6 +1,7 @@
 
 
 export interface Artist {
+    id : number;
     firstname : string;
     lastname : string;
     birthdate : Date;
