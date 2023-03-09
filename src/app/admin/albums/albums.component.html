@@ -1,1 +1,18 @@
-<p>albums works!</p>
+<h2>Gestion des albums</h2>
+
+
+<div class="content">
+    <article *ngFor="let album of listAlbums">
+        <section>
+            <p>Titre : {{ album.title }}</p>
+            <!-- <p>Cover : {{ album }}</p> -->
+            
+        </section>
+        <section>
+            <button routerLink="/admin/albums/update/{{album.id}}">Modifier</button>
+            <button (click)="deleteAlbum(album.id)">Supprimer</button>
+        </section>
+    </article>
+</div>
+
+<a routerLink="/admin/album">Ajouter un album</a>

@@ -1,9 +1,15 @@
 .content {
     display: flex;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    flex: 0 1 auto;
 }
 
 article {
     margin: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
 }

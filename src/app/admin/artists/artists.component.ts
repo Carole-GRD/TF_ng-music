@@ -38,7 +38,7 @@ export class ArtistsComponent implements OnInit{
       error : (err) => {
         console.log('erreur de suppression : ', err);
         if(err.status === 404) {
-          this._router.navigateByUrl('/not-found')
+          this._router.navigateByUrl('/not-found');
         }
 
       },

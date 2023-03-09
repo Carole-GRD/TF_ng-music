@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateGenreComponent } from './genres/update-genre/update-genre.component';
 import { CreateArtistComponent } from './artists/create-artist/create-artist.component';
 import { UpdateArtistComponent } from './artists/update-artist/update-artist.component';
+import { CreateAlbumComponent } from './albums/create-album/create-album.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { UpdateArtistComponent } from './artists/update-artist/update-artist.com
     CreateGenreComponent,
     UpdateGenreComponent,
     CreateArtistComponent,
-    UpdateArtistComponent
+    UpdateArtistComponent,
+    CreateAlbumComponent
   ],
   imports: [
     CommonModule,
