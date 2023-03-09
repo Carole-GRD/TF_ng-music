@@ -1,1 +1,16 @@
-<p>create-album works!</p>
+<h2>Création d'un album</h2>
+
+<div>
+    <a routerLink="/admin/albums">Revenir à la liste des albums</a>
+</div>
+
+<form [formGroup]="albumForm" (ngSubmit)="createAlbum()">
+    <div class="form-group mb-2">
+        <label for="title">Titre :</label>
+        <input id="title" type="text" formControlName="title">
+        <span class="txt-danger" *ngIf="albumForm.get('title')?.errors?.['required'] && albumForm.get('title')?.touched">Ce champ est requis</span>
+        <span class="txt-danger" *ngIf="albumForm.get('title')?.errors?.['maxlength']">Le titre doit faire maximum 50 caractères</span>
+    </div>
+
+    <button type="submit">Créer l'album</button>
+</form>
