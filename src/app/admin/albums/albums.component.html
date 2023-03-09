@@ -4,11 +4,10 @@
 <div class="content">
     <article *ngFor="let album of listAlbums">
         <section>
-            <p>Titre : {{ album.title }}</p>
-            <!-- <p>Cover : {{ album }}</p> -->
-            
+            <p>{{ album.title }}</p>
+            <img class="mb-2" [src]="'http://localhost:8080' + album.cover" alt="Cover de l'album">
         </section>
-        <section>
+        <section class="buttons-update-album mb-2">
             <button routerLink="/admin/albums/update/{{album.id}}">Modifier</button>
             <button (click)="deleteAlbum(album.id)">Supprimer</button>
         </section>
