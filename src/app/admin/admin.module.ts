@@ -12,6 +12,7 @@ import { UpdateGenreComponent } from './genres/update-genre/update-genre.compone
 import { CreateArtistComponent } from './artists/create-artist/create-artist.component';
 import { UpdateArtistComponent } from './artists/update-artist/update-artist.component';
 import { CreateAlbumComponent } from './albums/create-album/create-album.component';
+import { UpdateAlbumComponent } from './albums/update-album/update-album.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { CreateAlbumComponent } from './albums/create-album/create-album.compone
     UpdateGenreComponent,
     CreateArtistComponent,
     UpdateArtistComponent,
-    CreateAlbumComponent
+    CreateAlbumComponent,
+    UpdateAlbumComponent
   ],
   imports: [
     CommonModule,

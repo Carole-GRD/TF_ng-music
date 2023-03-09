@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumsComponent } from './albums/albums.component';
 import { CreateAlbumComponent } from './albums/create-album/create-album.component';
+import { UpdateAlbumComponent } from './albums/update-album/update-album.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { CreateArtistComponent } from './artists/create-artist/create-artist.component';
 import { UpdateArtistComponent } from './artists/update-artist/update-artist.component';
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'artists/create', component: CreateArtistComponent },
   { path: 'artists/update/:id', component: UpdateArtistComponent },
   { path: 'albums', component: AlbumsComponent },
-  { path: 'albums/create', component: CreateAlbumComponent }
+  { path: 'albums/create', component: CreateAlbumComponent },
+  { path: 'albums/update/:id', component: UpdateAlbumComponent }
 ];
 
 @NgModule({
