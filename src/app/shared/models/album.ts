@@ -11,7 +11,7 @@ export interface AlbumResultArray {
     statusCode : number;
 }
 
-export interface ArtistResult {
+export interface AlbumResult {
     result : Album;
     statusCode : number;
 }
