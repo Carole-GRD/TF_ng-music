@@ -26,4 +26,6 @@
 - ng g i genre
 
 ## Pour créer un interceptor
--ng g interceptor
+- ng generate interceptor nom-interceptor
+- ng g interceptor nom-interceptor
+- (attention à ne pas utiliser ng g i nom-interceptor  -> créera une interface)

@@ -11,6 +11,8 @@ export class GenreService {
 
   private _genreUrl : string = 'http://localhost:8080/api/genre/';
 
+  // private _options = {}
+
   constructor( private _httpClient: HttpClient ) { }
 
   getAll() : Observable<GenreResultArray> { 
